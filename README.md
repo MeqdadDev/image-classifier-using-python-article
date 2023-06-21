@@ -15,7 +15,7 @@ BUT...
 
 
 <p align="center">
-<img src="assets/image classification data labeling.webp" width=50% height=40%>
+<img src="assets/image classification data labeling.webp" width=60% height=70%>
 
 <i><a href="https://www.superannotate.com/blog/image-classification-basics">Source</a></i>
 </p>
@@ -24,14 +24,28 @@ Image classification involves categorizing images -an entire image- based on the
 
 
 ### Steps for Building Image Classifier
+#### (In our case)
 
 To build an image classifier, you need to walkthrough the following steps:
 - Collecting the data (images for each class)
 - Training your model (Teachable Machine from Google)
-- Testing your results
-- Improving and repeat
+- Testing your results in browser
+- Exporting trained model into Python environment
+- Classifying images with trained model by using [OpenCV](https://pypi.org/project/opencv-python/) and [Teachable Machine](https://pypi.org/project/teachable-machine/) packages
+- Improving and repeat if needed
 
 ## What We Are Going To Build?
 
-In this article, we are going to build an image classifier for classifying 
+We will create an image classifier that can distinguish between Arabic and English books.
+
+We will create an image classifier that can distinguish between Arabic and English books. To collect, train, and test data, we will use [Teachable Machine](https://teachablemachine.withgoogle.com/) from Google.
+
+After training the model, we will export it with a `.h5` extension and use it with OpenCV and Teachable Machine Python packages.
+
+### What is Teachable Machine?
+
+From the [official website](https://teachablemachine.withgoogle.com/):
+> Teachable Machine is a web-based tool that makes creating machine learning models fast, easy, and accessible to everyone.
+
 ### Collecting Data (Images)
+
