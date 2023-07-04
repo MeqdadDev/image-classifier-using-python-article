@@ -1,5 +1,6 @@
 
 # Building Customizable Image Classifier
+#### **Teachable Machine with OpenCV**
 
 This article is shared on:
 * [Medium](https://medium.com/@meqdad.dev)
@@ -15,7 +16,7 @@ BUT...
 
 
 <p align="center">
-<img src="assets/image classification data labeling.webp" width=60% height=70%>
+<img src="assets/image classification data labeling.webp" width=70% height=80%>
 
 <i><a href="https://www.superannotate.com/blog/image-classification-basics">Source</a></i>
 </p>
@@ -46,6 +47,14 @@ After training the model, we will export it with a `.h5` extension and use it wi
 
 From the [official website](https://teachablemachine.withgoogle.com/):
 > Teachable Machine is a web-based tool that makes creating machine learning models fast, easy, and accessible to everyone.
+
+With Teachable Machine, you can classify images, sounds, and poses. Our focus will be on using the image classification tool within the platform.
+
+<p align="center">
+<img src="assets/tm_tools.png" width=60% height=40%>
+</p>
+
+Using Teachable Machine, we will tackle the first three steps: collect data, train the model, and evaluate the results directly in the browser.
 
 ### Collecting Data (Images)
 
