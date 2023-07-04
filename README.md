@@ -23,6 +23,13 @@ BUT...
 
 Image classification involves categorizing images -an entire image- based on their types or classes, and it serves as a fundamental task in the field of computer vision. This process finds wide-ranging applications in various domains, including object detection, medical diagnosis, security, agriculture, and entertainment.
 
+#### Required Skills/Concepts Before Reading
+
+Before working on this tutorial, you need to know the following skills and concepts:
+
+* Python Programming
+* Image Processing (Basics of OpenCV)
+* Machine Learning Lifecycle
 
 ### Steps for Building Image Classifier
 #### (In our case)
@@ -50,11 +57,29 @@ From the [official website](https://teachablemachine.withgoogle.com/):
 
 With Teachable Machine, you can classify images, sounds, and poses. Our focus will be on using the image classification tool within the platform.
 
+Using Teachable Machine, we will tackle the first three steps: collect data, train the model, and evaluate the results directly in the browser.
+
+## Starting Image Classification on Teachable Machine
+
+After opening Teachable Machine platform, select _Image Project_.
+
 <p align="center">
 <img src="assets/tm_tools.png" width=60% height=40%>
 </p>
 
-Using Teachable Machine, we will tackle the first three steps: collect data, train the model, and evaluate the results directly in the browser.
+Teachable Machine offers two options to cater to different environments where image classification applications can be deployed. These environments include embedded systems with limited computing power and computers with high computing power.
+
+<p align="center">
+<img src="assets/stndrd_embedded_selection.png" width=60% height=40%>
+</p>
+
+We will select the _Standard image model_ option for our choice.
 
 ### Collecting Data (Images)
+
+As shown in the image below, on the left side we can add the classes and their data samples. You can provide samples using camera or from stored images on your computer. We will upload our image samples using camera for each class.
+
+<p align="center">
+<img src="assets/tm_ic_main.png" width=80% height=60%>
+</p>
 
