@@ -133,3 +133,4 @@ Click on the _Train Model_ button and patiently wait for a few seconds until the
 
 ### Testing Classification Results in Browser (Preview Results)
 
+After finishing training model, you'll notice that the camera will be opened and you can test the results directly in your browser.
