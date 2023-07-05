@@ -80,6 +80,56 @@ We will select the _Standard image model_ option for our choice.
 As shown in the image below, on the left side we can add the classes and their data samples. You can provide samples using camera or from stored images on your computer. We will upload our image samples using camera for each class.
 
 <p align="center">
-<img src="assets/tm_ic_main.png" width=80% height=60%>
+<img src="assets/tm_ic_main.png" width=95% height=80%>
 </p>
+
+We utilized the built-in computer camera to capture screenshots of various books in both Arabic and English, as depicted in the accompanying images.
+
+#### Arabic books:
+
+The first one:
+
+<p align="center">
+<img src="assets/arabic_class_begovic.png" width=40% height=50%>
+</p>
+
+The second one:
+
+<p align="center">
+<img src="assets/arabic_class_fanon.png" width=40% height=50%>
+</p>
+
+
+#### English books:
+
+The first one:
+
+<p align="center">
+<img src="assets/english_class.png" width=40% height=50%>
+</p>
+
+The second one:
+
+<p align="center">
+<img src="assets/english_class_nosql.png" width=40% height=50%>
+</p>
+
+Upon completion of the data collection process, the final result will resemble the image provided.
+
+<p align="center">
+<img src="assets/data_collection.png" width=50% height=40%>
+</p>
+
+### Training Model
+
+The training of our model is effortlessly accomplished as Teachable Machine takes care of it automatically in the background. All that is required from us is to patiently await the results.
+
+Click on the _Train Model_ button and patiently wait for a few seconds until the training process is completed. It is important to note that you must keep your browser open on the Teachable Machine tab, as switching tabs will terminate the training session and require you to restart the training from the beginning.
+
+<p align="center">
+<img src="assets/training_model.png" width=60% height=50%>
+</p>
+
+
+### Testing Classification Results in Browser (Preview Results)
 
