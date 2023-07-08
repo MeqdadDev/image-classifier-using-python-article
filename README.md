@@ -136,7 +136,7 @@ Click on the _Train Model_ button and patiently wait for a few seconds until the
 Once the training of the model is complete, you will observe that the camera is activated, enabling you to directly evaluate the outcomes within your web browser.
 
 <p align="center">
-<img src="assets/preview_results.gif" width=15% height=20%>
+<img src="assets/preview_results.gif" width=25% height=35%>
 </p>
 
 ### Exporting Model
