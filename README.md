@@ -117,7 +117,7 @@ The second one:
 Upon completion of the data collection process, the final result will resemble the image provided.
 
 <p align="center">
-<img src="assets/data_collection.png" width=50% height=40%>
+<img src="assets/data_collection.png" width=40% height=35%>
 </p>
 
 ### Training Model
@@ -133,4 +133,21 @@ Click on the _Train Model_ button and patiently wait for a few seconds until the
 
 ### Testing Classification Results in Browser (Preview Results)
 
-After finishing training model, you'll notice that the camera will be opened and you can test the results directly in your browser.
+Once the training of the model is complete, you will observe that the camera is activated, enabling you to directly evaluate the outcomes within your web browser.
+
+<p align="center">
+<img src="assets/preview_results.gif" width=15% height=20%>
+</p>
+
+### Exporting Model
+
+By exporting the model, we can utilize the pre-trained model in various contexts, such as gaming classification, scientific projects, and more.
+
+In our scenario, we will export the model in Tensorflow format (.h5) to facilitate interaction with it using image processing packages and libraries like OpenCV or Pillow.
+
+To proceed, simply click on the _Export Model_ option depicted in the image displayed below.
+
+<p align="center">
+<img src="assets/export_model1.png" width=30% height=50%>
+</p>
+
