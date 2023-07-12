@@ -31,6 +31,8 @@ Before working on this tutorial, you need to know the following skills and conce
 * Image Processing (Basics of OpenCV)
 * Machine Learning Lifecycle
 
+_Note_: This code is tested on Windows environment.
+
 ### Steps for Building Image Classifier
 #### (In our case)
 
@@ -148,6 +150,40 @@ In our scenario, we will export the model in Tensorflow format (.h5) to facilita
 To proceed, simply click on the _Export Model_ option depicted in the image displayed below.
 
 <p align="center">
-<img src="assets/export_model1.png" width=30% height=50%>
+<img src="assets/export_model1.png" width=40% height=60%>
 </p>
+
+We aim to utilize the TensorFlow (Keras) `.h5` format to export our model for Python usage.
+
+Select _TensorFlow_, _Keras_ and click on _Download my model_ button.
+
+<p align="center">
+<img src="assets/export_model2.png" width=70% height=70%>
+</p>
+
+After a period of waiting, you will observe the presence of a compressed file containing two items:
+
+* `keras_model.h5` (Our exported model)
+* `labels.txt` (text file for class names with IDs)
+
+After opening the `labels.txt` file, you should find its contents to resemble the following:
+
+```
+0 Arabic
+1 English
+```
+
+### Classifying Image with Python
+
+In the same directory, create a new Python file (e.g. named `app.py`).
+
+It is crucial to ensure that both `keras_model.h5` and `labels.txt` reside in the same directory (relative path) as the Python file.
+
+#### Teachable Machine Package Installation
+
+In your terminal, use this command to download `teachable-machine` package:
+
+```bash
+pip install teachable-machine
+```
 
