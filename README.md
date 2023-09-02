@@ -29,7 +29,7 @@ Before working on this tutorial, you need to know the following skills and conce
 
 * Python Programming
 * Image Processing (Basics of OpenCV)
-* Machine Learning Lifecycle
+* Familiarity with Machine Learning Lifecycle
 
 _Note_: This code is tested on Windows environment.
 
@@ -48,7 +48,7 @@ To build an image classifier, you need to walkthrough the following steps:
 
 We will create an image classifier that can distinguish between Arabic and English books.
 
-We will create an image classifier that can distinguish between Arabic and English books. To collect, train, and test data, we will use [Teachable Machine](https://teachablemachine.withgoogle.com/) from Google.
+We will create an machine learning model that can classify Arabic and English books. To collect, train, and test data, we will use [Teachable Machine](https://teachablemachine.withgoogle.com/) from Google.
 
 After training the model, we will export it with a `.h5` extension and use it with OpenCV and Teachable Machine Python packages.
 
@@ -173,13 +173,15 @@ After opening the `labels.txt` file, you should find its contents to resemble th
 1 English
 ```
 
-### Classifying Image with Python
+### Classifying Images with Python
 
 In the same directory, create a new Python file (e.g. named `app.py`).
 
 It is crucial to ensure that both `keras_model.h5` and `labels.txt` reside in the same directory (relative path) as the Python file.
 
-#### Teachable Machine Package Installation
+#### Teachable Machine Package
+
+Now, we need to install Teachable Machine for Python. The role of this package is to interact with the trained model by taking a captured image from camera by OpenCV, and converting it into tensors, so the model can classify it. In other words, it will handle the deep learning side for us in a few lines of code.
 
 In your terminal, use this command to download `teachable-machine` package:
 
@@ -187,3 +189,77 @@ In your terminal, use this command to download `teachable-machine` package:
 pip install teachable-machine
 ```
 
+#### Accessing Camera using OpenCV
+
+OpenCV offers hundreds of built-in methods and classes to be used in image processing and computer vision. In our project, accessing the camera with a view is required to start capturing the images.
+
+Code of opening camera view using OpenCV:
+
+```python
+import cv2 as cv
+
+cap = cv.VideoCapture(0)
+
+while True:
+    _, img = cap.read()
+
+    cv.imshow("Video Stream", img)
+
+    cv.waitKey(1)
+```
+
+By running this code, you can open a view of your laptop's camera. It is important to know that the image frame is stored in `img` in our code, which will be operated as a matrix of numbers (represents pixels).
+
+
+#### Capturing and Classifying Images
+
+The next step is to capture an image from camera by using `imwrite` method in OpenCV. Then classifying the image using `teachable-machine` package.
+
+Final code of capturing and classifying images:
+
+```python
+from teachable_machine import TeachableMachine
+import cv2 as cv
+
+cap = cv.VideoCapture(0)
+model = TeachableMachine(model_path="keras_model.h5",
+                         labels_file_path="labels.txt")
+
+image_path = "screenshot.jpg"
+
+while True:
+    _, img = cap.read()
+    cv.imwrite(image_path, img)
+
+    result = model.classify_image(image_path)
+
+    print("class_index", result["class_index"])
+
+    print("class_name:::", result["class_name"])
+
+    print("class_confidence:", result["class_confidence"])
+
+    print("predictions:", result["predictions"])
+
+    cv.imshow("Video Stream", img)
+
+    cv.waitKey(1)
+```
+
+The code will print different information about the trained model response such as:
+* Index of Class
+* Label/Name of Class
+* Accuracy (Confidence)
+* All predictions for other classes
+
+### Final Word
+
+I hope that you've enjoyed the whole journey with image classification, If you're a developer trying to enhance the open-source tools, and you want to help me with developing and enhancing [Teachable Machine Python](https://github.com/MeqdadDev/teachable-machine) package;  PRs are welcomed at [project repository](https://github.com/MeqdadDev/teachable-machine).
+
+Useful Links:
+* [GitHub Version of Article](https://github.com/MeqdadDev/image-classifier-using-python-article)
+* [Teachable Machine Package](https://github.com/MeqdadDev/teachable-machine)
+* [Teachable Machine Platform](https://teachablemachine.withgoogle.com/)
+* [Teachable Machine Package on PyPI](https://pypi.org/project/teachable-machine/)
+
+Happy Classification
