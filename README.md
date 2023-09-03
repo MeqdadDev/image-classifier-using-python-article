@@ -3,8 +3,8 @@
 #### **Teachable Machine with OpenCV**
 
 This article is shared on:
-* [Medium](https://medium.com/@meqdad.dev)
-* [Dev.to](https://dev.to/meqdad_dev)
+* [Medium](https://medium.com/@meqdad.dev/building-simple-and-customizable-image-classifier-with-teachable-machine-and-python-30d50169d638)
+* [Dev.to](https://dev.to/meqdad_dev/building-simple-and-customizable-image-classifier-with-teachable-machine-and-python-4jim)
 
 ## Opening...
 
